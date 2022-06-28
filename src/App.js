@@ -1,8 +1,8 @@
+import { useEffect, useState } from 'react';
 import { Heading, VStack, IconButton, useColorMode } from "@chakra-ui/react";
+import { FaMoon, FaSun } from 'react-icons/fa';
 import Todolist from "./components/Todolist";
 import Addtodo from './components/Addtodo';
-import { FaMoon, FaSun } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
 
 function App() {
   const initialTodos = [

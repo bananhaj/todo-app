@@ -1,6 +1,5 @@
+import React, { useState } from 'react'
 import { Button, HStack, Input, useToast } from '@chakra-ui/react';
-import React from 'react'
-import { useState } from 'react';
 import { nanoid } from 'nanoid';
 
 const Addtodo = ({ handleAdd }) => {
