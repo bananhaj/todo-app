@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Heading, VStack, IconButton, useColorMode } from "@chakra-ui/react";
 import { FaMoon, FaSun } from 'react-icons/fa';
-import Todolist from "./components/Todolist";
-import Addtodo from './components/Addtodo';
+import { Todolist, Addtodo } from "./components";
+
 
 function App() {
   const initialTodos = [
@@ -15,7 +15,7 @@ function App() {
       body: 'get ready '
     }
   ]
-  const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem('todos')) || initialTodos)
+  const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem('todos')) ?? initialTodos)
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
   }, [todos])
