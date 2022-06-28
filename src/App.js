@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import { Heading, VStack, IconButton, useColorMode } from "@chakra-ui/react";
 import Todolist from "./components/Todolist";
 import Addtodo from './components/Addtodo';
@@ -17,7 +15,7 @@ function App() {
       body: 'get ready '
     }
   ]
-  const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem('todos')) || [])
+  const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem('todos')) || initialTodos)
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
   }, [todos])
